@@ -14,3 +14,9 @@ fizzbuzz' n =
         (True, False)  -> "fizz"
         (False, True)  -> "buzz"
         (False, False) -> show n
+
+-- fizzbuzz if/then/else
+fizzbuzz'' :: Int -> String
+fizzbuzz'' n = if rem n 3 == 0 && rem n 5 == 0 then "fizzbuzz" else
+    if rem n 3 == 0 then "fizz" else
+        if rem n 5 == 0 then "buzz" else show n
