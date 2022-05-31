@@ -20,3 +20,9 @@ fizzbuzz'' :: Int -> String
 fizzbuzz'' n = if rem n 3 == 0 && rem n 5 == 0 then "fizzbuzz" else
     if rem n 3 == 0 then "fizz" else
         if rem n 5 == 0 then "buzz" else show n
+
+-- fizzbuzz list
+fizzbuzzList :: [Int] -> [String]
+fizzbuzzList []     = error "no fizz; no buzz; no nuttin'"
+fizzbuzzList [x]    = [fizzbuzz x]
+fizzbuzzList (x:xs) = fizzbuzz x : fizzbuzzList xs
