@@ -11,3 +11,9 @@ x ♥ y = (elem x [ "Jeff", "Alice" ] && elem y [ "Sam", "Euterpe" ]) ||
 -- assign length of case to name
 x :: Int
 x = length $ case 2 + 3 of { 5 -> "yes"; _ -> "no" }
+
+-- redefine last as last'
+last' :: [a] -> a
+last' []     = error "borked!"
+last' [x]    = x
+last' (x:xs) = last' xs
