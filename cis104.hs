@@ -6,8 +6,10 @@
 
 -- convert positive integers to a list of digits
 toDigits :: Integer -> [Integer]
-toDigits n = [n]
+toDigits n
+    | n <= 0    = []
+    | otherwise = toDigits (quot n 10) ++ [rem n 10]
 
--- convert positive integers to a list of digits reversed
+-- toDigits reversed
 toDigitsRev :: Integer -> [Integer]
-toDigitsRev n = [n]
+toDigitsRev n = reverse $ toDigits n
