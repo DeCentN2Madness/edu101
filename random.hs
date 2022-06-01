@@ -20,6 +20,12 @@ last' (x:xs) = last' xs
 
 -- redefine length as length'
 length' :: (Num b) => [a] -> b
-length' []    = 0
-length' [x]   = 1
+length' []     = 0
+length' [x]    = 1
 length' (x:xs) = 1 + length' xs
+
+-- replacement for 'last'
+lastElem :: [a] -> a
+lastElem []     = error "empty array - no last element"
+lastElem [x]    = x
+lastElem (x:xs) = lastElem xs
