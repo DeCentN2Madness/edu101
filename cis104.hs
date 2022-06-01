@@ -13,3 +13,9 @@ toDigits n
 -- toDigits reversed
 toDigitsRev :: Integer -> [Integer]
 toDigitsRev n = reverse $ toDigits n
+
+-- Exercise 2
+
+-- double every other digit from right in list
+doubleEveryOther :: [Integer] -> [Integer]
+doubleEveryOther ns = {- magic! -}
