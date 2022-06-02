@@ -36,3 +36,17 @@ fib' n
     | n < 0     = error "negative fibonacci values not yet implemented"
     | otherwise = last $ take (fromInteger n + 1) fibs
     where fibs = 0 : scanl (+) 1 fibs
+
+-- Create a function to check if a string is palindrome
+-- "abc" - False
+-- "aba" - True
+palindrome :: [Char] -> Bool
+palindrome = error "Implement"
+
+-- Create a function to count the number of ways you can rearrange the letter of
+-- a string to create palindrome.
+-- ex - "abc" -> 0
+-- ex - "aabb" -> 2 "abba" and "baab"
+-- Assume the string contains letters "a" .. "z" only.
+numberOfPalindromes :: [Char] -> Integer
+numberOfPalindromes = error "Implement"
