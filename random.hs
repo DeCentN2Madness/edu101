@@ -41,7 +41,7 @@ fib' n
 -- "abc" - False
 -- "aba" - True
 palindrome :: [Char] -> Bool
-palindrome = error "Implement"
+palindrome s = s == reverse s
 
 -- Create a function to count the number of ways you can rearrange the letter of
 -- a string to create palindrome.
