@@ -18,4 +18,4 @@ toDigitsRev n = reverse $ toDigits n
 
 -- double every other digit from right in list
 doubleEveryOther :: [Integer] -> [Integer]
-doubleEveryOther ns = {- magic! -}
+doubleEveryOther ns = error "make magic!"
