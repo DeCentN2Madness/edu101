@@ -29,3 +29,10 @@ lastElem :: [a] -> a
 lastElem []     = error "empty array - no last element"
 lastElem [x]    = x
 lastElem (x:xs) = lastElem xs
+
+-- fibonacci index
+fib' :: Integer -> Integer
+fib' n
+    | n < 0     = error "negative fibonacci values not yet implemented"
+    | otherwise = last $ take (fromInteger n + 1) fibs
+    where fibs = 0 : scanl (+) 1 fibs
