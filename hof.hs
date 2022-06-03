@@ -70,12 +70,17 @@ evens :: [Int] -> [Int]
 evens [] = []
 evens (x:xs)
   | even x = x : evens xs
-	| otherwise = evens xs
+  | otherwise = evens xs
 
 -- HOMEWORK
 -- Take care of 'a' and 'A' both.
+
+-- usign elem
 vowels :: String -> String
-vowels = undefined
+vowels [] = []
+vowels (x:xs)
+  | x `elem` ['a','A','e','E','i','I','o','O','u','U'] = x : vowels xs
+  | otherwise = vowels xs
 
 -- HOMEWORK:
 -- What is common between evens and vowels?
