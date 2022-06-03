@@ -42,7 +42,9 @@ fib'' :: Integer -> Integer
 fib'' n
     | n < 0     = error "no negatives"
     | n == 0    = 0
-    | otherwise = last $ take (fromIntegral n) [ round (((1.0 + sqrt 5.0) / 2.0) ** x / sqrt 5.0 ) | x <- [1..] ]
+    | otherwise = last $ take (fromInteger n) [
+        round (((1.0 + sqrt 5.0) / 2.0) ** x / sqrt 5.0 ) | x <- [1..]
+    ]
 
 -- Create a function to check if a string is palindrome
 -- "abc" - False
