@@ -93,7 +93,7 @@ vowels (x:xs)
 vowels' :: String -> String
 vowels' [] = []
 vowels' (x:xs)
-  | x `elem` ['a','A','e','E','i','I','o','O','u','U'] = x : vowels' xs
+  | x `elem` "aAeEiIoOuU" = x : vowels' xs
   | otherwise = vowels' xs
 
 -- HOMEWORK:
