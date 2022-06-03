@@ -59,9 +59,12 @@ getsLength' xs = map' length xs
 -- adds7' xs = map' +7) xs
 
 -- HOMEWORK: Write a function that takes a list of list of numbers and finds the sum of each list.
--- sums :: [[Int]] -> [Int]
--- Example: sums [] = []
---          sums [ [1, 10, -100], [-2, -6], [] ] = [-89, -8, 0]
+-- EXAMPLE USAGE: sums [ [1, 10, -100], [-2, -6], [] ] = [-89, -8, 0]
+sums :: [[Int]] -> [Int]
+sums [] = []
+sums (x:xs)
+  | null x    = 0 : sums xs
+  | otherwise = sum x : sums xs
 
 -----------------------------------------------
 ---------FILTER--------------------------------
