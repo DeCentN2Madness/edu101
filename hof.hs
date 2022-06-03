@@ -99,3 +99,8 @@ vowels' (x:xs)
 -- HOMEWORK:
 -- What is common between evens and vowels?
 -- What is different?
+
+-- [a] -> [a]
+-- base case is same
+-- if head matches pattern, prepend it to next recursion
+-- otherwise, recurse
