@@ -75,12 +75,23 @@ evens (x:xs)
 -- HOMEWORK
 -- Take care of 'a' and 'A' both.
 
--- usign elem
+-- using ||
 vowels :: String -> String
 vowels [] = []
 vowels (x:xs)
-  | x `elem` ['a','A','e','E','i','I','o','O','u','U'] = x : vowels xs
-  | otherwise = vowels xs
+  | x == 'a' || x == 'A' ||
+    x == 'e' || x == 'E' ||
+    x == 'i' || x == 'I' ||
+    x == 'o' || x == 'O' ||
+    x == 'u' || x == 'U' = x : vowels xs
+  | otherwise            =     vowels xs
+
+-- usign elem
+vowels' :: String -> String
+vowels' [] = []
+vowels' (x:xs)
+  | x `elem` ['a','A','e','E','i','I','o','O','u','U'] = x : vowels' xs
+  | otherwise = vowels' xs
 
 -- HOMEWORK:
 -- What is common between evens and vowels?
