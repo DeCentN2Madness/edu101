@@ -75,6 +75,12 @@ evens (x:xs)
   | even x = x : evens xs
   | otherwise = evens xs
 
+evens' :: [Int] -> [Int]
+evens' [] = []
+evens' (x:xs)
+  | x `elem` [2,4..] = x : evens' xs
+  | otherwise = evens' xs
+
 -- HOMEWORK
 -- Take care of 'a' and 'A' both.
 
