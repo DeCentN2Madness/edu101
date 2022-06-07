@@ -46,6 +46,13 @@ fib'' n
         round (((1.0 + sqrt 5.0) / 2.0) ** x / sqrt 5.0 ) | x <- [1..]
     ]
 
+-- fibonacci zipped
+fib''' :: Integer -> Integer
+fib''' n = if n < 0
+           then error "no negatives"
+           else last $ take (fromIntegral n) fibs
+               where fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
+
 -- Create a function to check if a string is palindrome
 -- "abc" - False
 -- "aba" - True
