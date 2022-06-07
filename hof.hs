@@ -69,12 +69,14 @@ sums (x:xs)
 -----------------------------------------------
 ---------FILTER--------------------------------
 
+-- using even
 evens :: [Int] -> [Int]
 evens [] = []
 evens (x:xs)
   | even x = x : evens xs
   | otherwise = evens xs
 
+-- using elem
 evens' :: [Int] -> [Int]
 evens' [] = []
 evens' (x:xs)
