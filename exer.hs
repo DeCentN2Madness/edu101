@@ -23,3 +23,6 @@ elem'' a (x:xs) = a == x || elem'' a xs
      create a function nub that removes all duplicates from a given list
 -} 
 nub :: (Eq a) => [a] -> [a]
+nub [] = []
+nub (x:xs) | not $ elem'' x xs = x : nub xs
+           | otherwise       = nub xs
