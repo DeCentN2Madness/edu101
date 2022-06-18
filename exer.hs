@@ -32,3 +32,6 @@ nub (x:xs) | not $ elem'' x xs = x : nub xs
      of ascending order
 -}
 isAsc :: [Int] -> Bool
+isAsc [] = True
+isAsc (x:xs) = null xs || x <= head xs && isAsc xs
+-- isAsc (x:y:xs) = null (y:xs) || x <= y && isAsc (y:xs)
