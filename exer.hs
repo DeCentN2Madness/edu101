@@ -41,3 +41,8 @@ isAsc (x:xs) = null xs || x <= head xs && isAsc xs
      exists within a directed graph
 -}
 hasPath :: [(Int,Int)] -> Int -> Int -> Bool
+hasPath edges begin end
+  | null edges   = begin == end
+  | begin == end = True
+  | otherwise    = elem' True [ hasPath edges' y end | (x,y) <- edges, x == begin ]
+  where edges'   = [ (x,y) | (x,y) <- edges, x /= begin ]
