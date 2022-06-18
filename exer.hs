@@ -26,3 +26,9 @@ nub :: (Eq a) => [a] -> [a]
 nub [] = []
 nub (x:xs) | not $ elem'' x xs = x : nub xs
            | otherwise       = nub xs
+
+{- Excercise #3
+     create a function isAsc that returns True if the list given to it is a list
+     of ascending order
+-}
+isAsc :: [Int] -> Bool
