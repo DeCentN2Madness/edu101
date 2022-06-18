@@ -11,3 +11,10 @@ elem' _ []    = False
 elem' a (x:xs)
   | a == x    = True
   | otherwise = elem' a xs
+
+{- Excercise #1 extra
+     do it again with style… or somethin'
+-}
+elem'' :: (Eq a) => a -> [a] -> Bool
+elem'' _ []     = False
+elem'' a (x:xs) = a == x || elem'' a xs
