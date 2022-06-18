@@ -35,3 +35,9 @@ isAsc :: [Int] -> Bool
 isAsc [] = True
 isAsc (x:xs) = null xs || x <= head xs && isAsc xs
 -- isAsc (x:y:xs) = null (y:xs) || x <= y && isAsc (y:xs)
+
+{- Excercise #4
+     create a function hasPath that determines if a path from one node to another
+     exists within a directed graph
+-}
+hasPath :: [(Int,Int)] -> Int -> Int -> Bool
