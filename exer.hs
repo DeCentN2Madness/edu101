@@ -18,3 +18,8 @@ elem' a (x:xs)
 elem'' :: (Eq a) => a -> [a] -> Bool
 elem'' _ []     = False
 elem'' a (x:xs) = a == x || elem'' a xs
+
+{- Excercise #2
+     create a function nub that removes all duplicates from a given list
+-} 
+nub :: (Eq a) => [a] -> [a]
