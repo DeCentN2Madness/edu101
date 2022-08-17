@@ -24,3 +24,4 @@ cabal.project.local~
 
 temp.hs
 fiaz
+.direnv
