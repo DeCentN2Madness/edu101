@@ -18,4 +18,12 @@ toDigitsRev n = reverse $ toDigits n
 
 -- double every other digit from right in list
 doubleEveryOther :: [Integer] -> [Integer]
-doubleEveryOther ns = error "make magic!"
+doubleEveryOther ns =
+  if length ns == 16 then reverse $ dblEvensL $ reverse ns
+  else error "credit card numbers are 16 digits"
+  where
+    dblEvensL (x:y:ns)
+      | null (x:y:ns) = []
+      | null (y:ns)   = [x]
+      | null ns       = x : [2 * y]
+      | otherwise     = x : 2 * y : dblEvensL ns
