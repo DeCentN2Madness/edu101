@@ -21,7 +21,7 @@ elem'' a (x:xs) = a == x || elem'' a xs
 
 {- Excercise #2
      create a function nub that removes all duplicates from a given list
--} 
+-}
 nub :: (Eq a) => [a] -> [a]
 nub [] = []
 nub (x:xs) | not $ elem'' x xs = x : nub xs
@@ -46,3 +46,17 @@ hasPath edges begin end
   | begin == end = True
   | otherwise    = elem' True [ hasPath edges' y end | (x,y) <- edges, x == begin ]
   where edges'   = [ (x,y) | (x,y) <- edges, x /= begin ]
+
+{- Xtra credit
+     create a function raceResult that prompts for a number between 1 and 10
+     then returns the race result.
+-}
+raceResult :: IO String
+raceResult = do
+  putStr "How many contestants? "; c <- getLine
+  putStr $ "number from 1 to " ++ c ++ ": "; r <- getLine
+  case r of
+    "1"    -> return "You won a gold medal!"
+    "2"    -> return "You got a silver medal!"
+    "3"    -> return "You got a bronze medal."
+    (x:xs) -> return "No podium for you, loser!!"
