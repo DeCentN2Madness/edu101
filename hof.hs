@@ -98,10 +98,11 @@ vowels (x:xs)
   | otherwise            =     vowels xs
 
 -- usign elem
+{- HLINT ignore "Use infix" -}
 vowels' :: String -> String
 vowels' [] = []
 vowels' (x:xs)
-  | x `elem` "aAeEiIoOuU" = x : vowels' xs
+  | elem x "aAeEiIoOuU" = x : vowels' xs
   | otherwise = vowels' xs
 
 -- HOMEWORK:
