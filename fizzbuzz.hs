@@ -1,3 +1,5 @@
+module FizzBuzz (fizzbuzzList) where
+
 -- fizzbuzz guards
 fizzbuzz :: Int -> String
 fizzbuzz n
