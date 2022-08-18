@@ -27,3 +27,7 @@ doubleEveryOther ns =
       | null (y:ns)   = [x]
       | null ns       = x : [2 * y]
       | otherwise     = x : 2 * y : dblEvensL ns
+
+doubleEveryOther' :: [Integer] -> [Integer]
+doubleEveryOther' ns = fst $ foldr dblSnd ([], False) ns
+  where dblSnd x (acc, bool) = ((if bool then 2 * x else x) : acc, not bool)
