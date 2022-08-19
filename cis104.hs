@@ -38,3 +38,12 @@ doubleEveryOther' ns = fst $ foldr dblSnd ([], False) ns
 -- Example: sumDigits [16,7,12,5] = 1 + 6 + 7 + 1 + 2 + 5 = 22
 sumDigits :: [Integer] -> Integer
 sumDigits = undefined
+
+-- Exercise 4
+
+-- indicate whether an Integer could be a valid credit card number
+-- use all functions defined in the previous exercises
+-- Example: validate 4012888888881881 = True
+-- Example: validate 4012888888881882 = False
+validate :: Integer -> Bool
+validate = undefined
