@@ -43,6 +43,8 @@ sumDigits = undefined
 
 -- indicate whether an Integer could be a valid credit card number
 -- use all functions defined in the previous exercises
+-- calculate the remainder when sumDigits is divided by 10
+-- if the result is 0, the number is valid
 -- Example: validate 4012888888881881 = True
 -- Example: validate 4012888888881882 = False
 validate :: Integer -> Bool
