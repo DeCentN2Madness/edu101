@@ -31,3 +31,10 @@ doubleEveryOther ns =
 doubleEveryOther' :: [Integer] -> [Integer]
 doubleEveryOther' ns = fst $ foldr dblSnd ([], False) ns
   where dblSnd x (acc, bool) = ((if bool then 2 * x else x) : acc, not bool)
+
+-- Exercise 3
+
+-- calculate the sum of all digits
+-- Example: sumDigits [16,7,12,5] = 1 + 6 + 7 + 1 + 2 + 5 = 22
+sumDigits :: [Integer] -> Integer
+sumDigits = undefined
